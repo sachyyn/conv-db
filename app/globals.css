@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 16 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 240 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 16 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;
+
+    --radius: 0.5rem;
+
+    --chart-1: #ff4500;
+    --chart-2: #51da4c;
+    --chart-3: #0000ff;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 16 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 22.3%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 240 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 16 100% 50%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 0 0% 22.3%;
+    --input: 0 0% 22.3%;
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-light leading-[1.1];
+  }
+  p {
+    @apply leading-[1.4];
+  }
+  strong,
+  b {
+    @apply font-semibold;
+  }
+  code,
+  pre {
+    @apply font-mono;
+  }
+}
+
+/* Custom styles for data visualization */
+.chart-grid line {
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1px;
+}
+
+.chart-border {
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1px;
+}
+
+.chart-marker {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.chart-line {
+  stroke-width: 2px;
+}
+
+.chart-area {
+  opacity: 0.1;
+}
+
+.chart-bar {
+  stroke: none;
+}
+
+.chart-pie-slice {
+  stroke: #ffffff;
+  stroke-width: 1px;
+}
